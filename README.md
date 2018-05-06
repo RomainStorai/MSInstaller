@@ -1,0 +1,11 @@
+# MSInstaller
+MainScriptsInstaller est une collection de scripts permettant d'installer tout type de choses sur un serveur debian.
+La totalité des scripts d'installation est stockée sur un serveur, ce qui permet d'avoir un script très léger et facile d'utilisation.
+
+# Comment ça marche ?
+Pour utiliser MSInstaller, il suffit de télécharger le script installer.sh puis de l'executer en administrateur avec la commande
+chmod +x installer.sh && ./installer.sh
+Une fois le script lancé, vous pouvez choisir le nom du script recherché ou vous pouvez visualiser la liste des scripts téléchargeables en tapant "list".
+
+# Liste des scripts disponibles:
+- Aucun pour le moment
