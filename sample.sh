@@ -5,7 +5,12 @@ GREEN='\033[1;32m'
 BLUE='\033[1;34m'
 WHITE='\033[0m'
 
-echo "${GREEN}You are going to install ${WHITE}TEST${GREEN}. Do you accept? ${WHITE} [Y/N]"
+name="TEST"
+tips="Its here you put some kind of informations you want, that can be a message or a help for the installation.."
+
+echo "TIPS: $tips"
+echo " "
+echo "${GREEN}You are going to install ${WHITE}$name${GREEN}. Do you accept? ${WHITE} [Y/N]"
 read answer
 
 if [ $answer = "Y" ]; then
@@ -13,7 +18,7 @@ if [ $answer = "Y" ]; then
 	apt-get update
 	apt-get upgrade
 
-	echo "${GREEN}THE INSTALLATION SUCCEEDED! TEST HAS BEEN INSTALL.${WHITE}"
+	echo "${GREEN}THE INSTALLATION SUCCEEDED! $name HAD BEEN INSTALLED.${WHITE}"
 	sleep 3
 	exit
 fi

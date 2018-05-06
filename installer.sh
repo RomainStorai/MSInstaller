@@ -22,7 +22,7 @@ install_script () {
 		echo " "
 		if [ ! -f $1.sh ]; then
 			echo "${BLUE}Downloading script ${WHITE}$1${BLUE}..."
-			wget -q http://51.254.18.76/$1.sh
+			wget -q https://raw.githubusercontent.com/RomainStorai/MSInstaller/12e6f9206637a45216747af2c01f0144b128876c/$1.sh
 			if [ ! -f $1.sh ]; then
 				clear_console
 				echo "${RED}Download failed!${WHITE}"
