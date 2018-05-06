@@ -18,8 +18,10 @@ if [ $answer = "Y" ]; then
 	apt-get update
 	apt-get upgrade
 
-	echo "${GREEN}THE INSTALLATION SUCCEEDED! $name HAD BEEN INSTALLED.${WHITE}"
+	echo "${GREEN}INSTALLATION SUCCESSFUL! $name HAD BEEN INSTALLED.${WHITE}"
 	sleep 3
 	exit
+else
+	echo "${RED}Cancelling the installation...${WHITE}"
 fi
 exit

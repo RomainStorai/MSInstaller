@@ -15,15 +15,17 @@ if [ $answer = "Y" ]; then
 	apt-get upgrade
 	echo "${BLUE}Adding java 8 packets...${WHITE}"
 	echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main" | tee /etc/apt/sources.list.d/webupd8team-java.list
-    echo "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main" | tee -a /etc/apt/sources.list.d/webupd8team-java.list
+	echo "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main" | tee -a /etc/apt/sources.list.d/webupd8team-java.list
     apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys EEA14886
-    echo "${BLUE}Update ine more time...${WHITE}"
+    echo "${BLUE}Update one more time...${WHITE}"
 	apt-get update
 	apt-get upgrade
 	echo "${BLUE}Installing java 8...${WHITE}"
 	apt-get install oracle-java8-installer
-	echo "${GREEN}THE INSTALLATION SUCCEEDED! $name HAD BEEN INSTALLED.${WHITE}"
+	echo "${GREEN}INSTALLATION SUCCESSFUL! $name HAD BEEN INSTALLED.${WHITE}"
 	sleep 3
 	exit
+else
+	echo "${RED}Cancelling the installation...${WHITE}"
 fi
 exit
