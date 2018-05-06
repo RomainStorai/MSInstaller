@@ -12,4 +12,8 @@ chmod +x installer.sh && ./installer.sh
 Une fois le script lancé, vous pouvez choisir le nom du script recherché ou vous pouvez visualiser la liste des scripts téléchargeables en tapant "list".
 
 ## Liste des scripts disponibles:
-- Aucun pour le moment
+- minecraft
+- teamspeak3
+- apache2
+- java
+- java8
