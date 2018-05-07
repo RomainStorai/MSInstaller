@@ -20,33 +20,18 @@ check_downloader () {
 install_script () {
 	if [ ! -z "$1" ]; then
 		echo " "
+		echo "${BLUE}Preparing download of the script for ${WHITE}$1${BLUE}..."
+		wget -q -O $1.sh https://raw.githubusercontent.com/RomainStorai/MSInstaller/master/$1.sh
 		if [ ! -f $1.sh ]; then
-			echo "${BLUE}Preparing download of the script for ${WHITE}$1${BLUE}..."
-			wget -q https://raw.githubusercontent.com/RomainStorai/MSInstaller/master/$1.sh
-			if [ ! -f $1.sh ]; then
-				clear_console
-				echo "${RED}Unknown script!${WHITE}"
-			else
-				clear_console
-				echo "${GREEN}Downloaded!${WHITE}"
-				chmod 744 $1.sh
-				echo "${BLUE}Launching the script!${WHITE}"
-				echo " "
-				./$1.sh
-			fi
+			clear_console
+			echo "${RED}Unknown script!${WHITE}"
 		else
-			fileage="echo $((($(date +%s) - $(date +%s -r "$1.sh")) / 60))"
-			if [ "$fileage" -ge "5" ]; then
-				rm $1.sh
-				install_script $1
-			else
-				clear_console
-				echo "${GREEN}Script already installed!${WHITE}"
-				chmod 744 $1.sh
-				echo "${BLUE}Launching script!${WHITE}"
-				echo " "
-				./$1.sh
-			fi
+			clear_console
+			echo "${GREEN}Downloaded!${WHITE}"
+			chmod 744 $1.sh
+			echo "${BLUE}Launching the script!${WHITE}"
+			echo " "
+			./$1.sh
 		fi
 	fi
 }
@@ -103,6 +88,7 @@ while true; do
 
 		elif [ ! -z "$answer" -a "$answer" != " " ]; then
 			install_script $answer
+			echo "${WHITE}Ended. Push Enter."
 			read answer
 	fi
 
