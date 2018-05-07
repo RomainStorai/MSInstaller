@@ -17,3 +17,6 @@ Une fois le script lancé, vous pouvez choisir le nom du script recherché ou vo
 - apache2
 - java
 - java8
+- php5
+- mysql
+- phpmyadmin

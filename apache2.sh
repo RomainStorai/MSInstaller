@@ -38,6 +38,7 @@ if [ $answer = "Y" ]; then
 			apt-get install phpmyadmin
     		ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin
     		apt-get install php5-mysql
+    		echo "${BLUE}Restarting apache2..${WHITE}"
     		service apache2 restart
 			echo "${GREEN}phpMyAdmin installed!${WHITE}"
 		fi

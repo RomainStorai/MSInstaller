@@ -3,3 +3,6 @@ minecraft
 teamspeak3
 java
 java8
+php5
+mysql
+phpmyadmin
