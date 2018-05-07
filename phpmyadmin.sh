@@ -15,7 +15,7 @@ if [ $answer = "Y" ]; then
 	apt-get upgrade
 	echo "${RED}Do you already have MySQL? ${WHITE} [Y/N]"
 	read msql
-	if [ $msql = "Y"]; then
+	if [ $msql = "Y" ]; then
 		echo "${BLUE}Installing mysql...${WHITE}"
 		apt-get install mysql-server
 		echo "${GREEN}mysql installed!${WHITE}"

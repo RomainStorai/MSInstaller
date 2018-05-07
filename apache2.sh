@@ -17,7 +17,7 @@ if [ $answer = "Y" ]; then
 	apt-get install apache2
 	echo "${RED}Do you want to install PHP5? ${WHITE} [Y/N]"
 	read php5
-	if [ $php5 = "Y"]; then
+	if [ $php5 = "Y" ]; then
 		echo "${BLUE}Installing php5...${WHITE}"
 		apt-get install php5
 		echo "${BLUE}Restarting apache2..${WHITE}"
@@ -27,13 +27,13 @@ if [ $answer = "Y" ]; then
 	fi
 	echo "${RED}Do you want to install mysql? ${WHITE} [Y/N]"
 	read mysqla
-	if [ $mysqla = "Y"]; then
+	if [ $mysqla = "Y" ]; then
 		echo "${BLUE}Installing mysql...${WHITE}"
 		apt-get install mysql-server
 		echo "${GREEN}mysql installed!${WHITE}"
 		echo "${RED}Do you want to add phpMyAdmin? ${WHITE} [Y/N]"
 		read phpmyadmin
-		if [ $phpmyadmin = "Y"]; then
+		if [ $phpmyadmin = "Y" ]; then
 			echo "${BLUE}Installing phpmyadmin...${WHITE}"
 			apt-get install phpmyadmin
     		ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin

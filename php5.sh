@@ -15,7 +15,7 @@ if [ $answer = "Y" ]; then
 	apt-get upgrade
 	echo "${RED}Do you already have apache2? ${WHITE} [Y/N]"
 	read apache
-	if [ $apache = "Y"]; then
+	if [ $apache = "Y" ]; then
 		echo "${BLUE}Installing apache2...${WHITE}"
 		apt-get install apache2
 		echo "${GREEN}apache2 installed!${WHITE}"

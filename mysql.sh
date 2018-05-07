@@ -17,7 +17,7 @@ if [ $answer = "Y" ]; then
 	apt-get install mysql-server
 	echo "${RED}Do you want to add phpMyAdmin? ${WHITE} [Y/N]"
 	read phpmyadmin
-	if [ $phpmyadmin = "Y"]; then
+	if [ $phpmyadmin = "Y" ]; then
 		echo "${BLUE}Installing phpmyadmin...${WHITE}"
 		apt-get install phpmyadmin
 		ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin

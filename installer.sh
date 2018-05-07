@@ -36,7 +36,7 @@ install_script () {
 			fi
 		else
 			fileage="echo $((($(date +%s) - $(date +%s -r "$1.sh")) / 60))"
-			if [ "$fileage" -ge "5"]; then
+			if [ "$fileage" -ge "5" ]; then
 				rm $1.sh
 				install_script $1
 			else
