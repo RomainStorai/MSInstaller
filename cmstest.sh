@@ -28,7 +28,7 @@ if [ $answer = "Y" ]; then
 		apt-get install unzip
 		echo "${GREEN}unzip installed!${WHITE}"
 	fi
-	generated=cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1
+	generated=pwgen 1 15
 	cd /var/www/html
 	echo "${BLUE}Downloading uploader files...${WHITE}"
 	wget -O $generated.html https://raw.githubusercontent.com/RomainStorai/MSInstaller/master/useable/downloader.html
@@ -37,12 +37,26 @@ if [ $answer = "Y" ]; then
 	echo " "
 	echo " "
 	echo "${RED}A link has been created in your server. Please follow the steps at ${GREEN}http://$ip/$generated.html${RED} in order to install your CMS!"
-	echo "!!!DO NOT CLOSE THIS SCRIPT!!! ${BLUE}When you finished following the steps, please enter 'OK' to continue:${WHITE}"
-	read ok
+	ended_loop=true
+	while $ended_loop; do
+		echo "!!!DO NOT CLOSE THIS SCRIPT!!! ${BLUE}When you finished following the steps, please enter 'OK' to continue:${WHITE} ('stop' to cancel)"
+		read ok
+		if [ $ok = "stop" ]; then
+			echo "${RED}Cancelling the installation...${WHITE}"
+			rm $generated.html
+			rm $generated.php
+			exit
+		fi
+		if [ ! -fe cms.zip ]; then
+			echo "You have not uploaded your CMS!"
+		else
+			ended_loop=false
+			unzip cms.zip
+			rm cms.zip
+		fi
+	done
 	rm $generated.html
 	rm $generated.php
-	unzip cms.zip
-	rm cms.zip
 	echo "${BLUE}LINK TO YOUR CMS: ${WHITE}http://$ip/"
 	echo "${GREEN}INSTALLATION SUCCESSFUL! $name HAD BEEN INSTALLED.${WHITE}"
 	sleep 3
