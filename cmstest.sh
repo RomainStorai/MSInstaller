@@ -28,7 +28,7 @@ if [ $answer = "Y" ]; then
 		apt-get install unzip
 		echo "${GREEN}unzip installed!${WHITE}"
 	fi
-	generated=pwgen 1 15
+	generated="pwgen 1 15"
 	cd /var/www/html
 	echo "${BLUE}Downloading uploader files...${WHITE}"
 	wget -O $generated.html https://raw.githubusercontent.com/RomainStorai/MSInstaller/master/useable/downloader.html
@@ -47,7 +47,7 @@ if [ $answer = "Y" ]; then
 			rm $generated.php
 			exit
 		fi
-		if [ ! -fe cms.zip ]; then
+		if [ ! -f cms.zip ]; then
 			echo "You have not uploaded your CMS!"
 		else
 			ended_loop=false
