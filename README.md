@@ -20,3 +20,4 @@ Une fois le script lancé, vous pouvez choisir le nom du script recherché ou vo
 - php5
 - mysql
 - phpmyadmin
+- cms

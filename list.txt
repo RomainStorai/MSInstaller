@@ -6,3 +6,4 @@ java8
 php5
 mysql
 phpmyadmin
+cms
