@@ -23,7 +23,7 @@ if [ $answer = "Y" ]; then
 	apt-get upgrade
 	echo "${RED}Have you already installed a webserver (apache) and php5 and a mysql database? ${WHITE} [Y/N]"
 	read yesno
-	if [ $yesno = "N"]; then
+	if [ $yesno = "N" ]; then
 		echo "${BLUE}Installing unzip...${WHITE}"
 		apt-get install unzip
 		echo "${GREEN}unzip installed!${WHITE}"
