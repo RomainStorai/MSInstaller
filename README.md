@@ -5,7 +5,7 @@ MainScriptsInstaller est une collection de scripts permettant d'installer tout t
 La totalité des scripts d'installation est stockée sur un serveur, ce qui permet d'avoir un script très léger et facile d'utilisation.
 
 ## Comment ça marche ?
-Pour utiliser MSInstaller, il suffit de télécharger le script <a href="https://raw.githubusercontent.com/RomainStorai/MSInstaller/master/apache2.sh">installer.sh</a> puis de l'executer en administrateur avec la commande
+Pour utiliser MSInstaller, il suffit de télécharger le script <a href="https://raw.githubusercontent.com/RomainStorai/MSInstaller/master/installer.sh">installer.sh</a> puis de l'executer en administrateur avec la commande
 ```
 chmod +x installer.sh && ./installer.sh
 ```
